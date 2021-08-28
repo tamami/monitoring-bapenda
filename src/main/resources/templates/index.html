@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="1">
+
+    <title>Title</title>
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/5.1.0/css/bootstrap.min.css}">
+</head>
+<body>
+<div class="container py-4">
+    <header class="pb-3 mb-4 border-bottom">
+        <div class="d-flex align-items-center text-dark text-decoration-none">
+            <span class="fs-4">Monitoring Status Layanan</span>
+        </div>
+    </header>
+</div>
+<br>
+<br>
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <h1 class="card-title">Layanan SIPENTOL</h1>
+            <div th:if="${response == 200}" class="alert alert-success">OK</div>
+            <div th:unless="${response == 200}" class="alert alert-danger">Error</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
